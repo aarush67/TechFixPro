@@ -1,6 +1,6 @@
 # TechFixPro
 
-How to Fix Common Computer Problems on Windows and Mac: A Step-by-Step Guide
+How to Fix Common Computer Problems on Windows and Mac: A Step-by-Step Guide:
 
 Are you tired of dealing with slow computers, frustrating errors, and those dreaded "blue screens of death"? Look no further! This easy-to-follow guide is your ultimate companion for troubleshooting and fixing the most common issues on both Windows and Mac computers.
 
