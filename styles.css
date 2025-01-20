@@ -13,6 +13,7 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
+
 /* Navbar Styling */
 .navbar {
     background-color: #333;
@@ -25,8 +26,9 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap; /* Allow items to stack on smaller screens */
 }
 
 .navbar li {
@@ -207,6 +209,20 @@ section {
     .payhip-section h2,
     .bubble h2 {
         font-size: 1.8em;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navbar a {
+        font-size: 1em;
+        padding: 12px;
+        text-align: center; /* Center align on smaller screens */
+    }
+
+    footer {
+        font-size: 0.9em;
     }
 
     .contact-form input,
