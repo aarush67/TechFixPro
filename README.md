@@ -5,6 +5,7 @@ Are you tired of dealing with slow computers, frustrating errors, and those drea
 From startup problems and internet connectivity issues to cleaning up storage and boosting performance, this guide is packed with clear, actionable steps that anyone can follow—no tech expertise required. Whether you're a beginner or a seasoned user, you'll find everything you need to keep your computer running smoothly.
 
 What You'll Learn:
+
 ✅ How to troubleshoot slow performance and speed up your computer.
 
 ✅ Fix annoying startup and shutdown problems.
