@@ -21,4 +21,5 @@ What You'll Learn:
 With easy explanations, helpful visuals, and practical advice, this guide is designed to save you time, money, and stress. Stop relying on expensive technicians and start fixing your computer problems yourself today!
 
 Download now and take control of your computer—it's easier than you think!:
+
 https://payhip.com/TechFixPro
