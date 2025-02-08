@@ -1,23 +1,21 @@
-// cursor.js
-
-// Function to move the custom cursor based on mouse movement
+// Handle mouse movement
 document.addEventListener('mousemove', function (e) {
-    const cursor = document.querySelector('.custom-cursor'); // Get the custom cursor element
+    const cursor = document.querySelector('.custom-cursor'); // Custom cursor element
 
-    // Position the custom cursor at the mouse position
+    // Position the custom cursor at the mouse's X and Y coordinates
     cursor.style.left = e.pageX + 'px';
     cursor.style.top = e.pageY + 'px';
 });
 
-// Change cursor when hovering over clickable elements (links, buttons, etc.)
+// Handle clickable areas (e.g., links, buttons, navbar)
 document.querySelectorAll('a, button, .clickable').forEach(item => {
     item.addEventListener('mouseenter', function () {
-        // Change cursor when hovering over clickable elements
-        document.body.style.cursor = 'url("cursor-click.svg"), auto';
+        // Change cursor to click version when hovering over clickable elements
+        document.querySelector('.custom-cursor').style.backgroundImage = 'url("cursor-click.svg")';
     });
 
     item.addEventListener('mouseleave', function () {
-        // Reset cursor when leaving the clickable area
-        document.body.style.cursor = 'url("cursor.svg"), auto';
+        // Change cursor back to default version when leaving clickable elements
+        document.querySelector('.custom-cursor').style.backgroundImage = 'url("cursor.svg")';
     });
 });
