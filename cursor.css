@@ -1,0 +1,21 @@
+/* Hide the default system cursor */
+* {
+    cursor: none !important; /* Apply cursor: none to all elements */
+}
+
+/* Custom cursor styling */
+.custom-cursor {
+    position: absolute;
+    width: 32px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+    background-image: url('cursor.svg'); /* Default custom cursor */
+    background-size: contain;
+    pointer-events: none; /* Ensure it doesn't block other clicks */
+    z-index: 9999; /* Make sure it's on top */
+    transition: transform 0.1s ease; /* Smooth movement */
+}
+
+/* Ensure clickable elements still show the pointer cursor */
+a, button, .clickable {
+    cursor: pointer; /* This makes sure the system cursor shows on interactive items */
+}
