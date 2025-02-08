@@ -13,9 +13,7 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-/* cursor.css */
-
-/* Hide the default system cursor */
+/* Hide the default cursor */
 body {
     cursor: none;
 }
@@ -23,17 +21,18 @@ body {
 /* Style for the custom cursor */
 .custom-cursor {
     position: absolute;
-    width: 32px;  /* Set your cursor width */
-    height: 32px; /* Set your cursor height */
+    width: 32px; /* Default size of the cursor */
+    height: 32px; /* Default size of the cursor */
     background-image: url('cursor.svg');  /* Default cursor image */
-    background-size: contain;
-    pointer-events: none;  /* Prevent the cursor from interfering with clicks */
+    background-size: contain; /* Ensure the image fits inside the div */
+    pointer-events: none; /* Prevents the custom cursor from interfering with clicks */
     transition: transform 0.1s ease;  /* Smooth movement */
+    z-index: 9999; /* Ensure the cursor appears on top */
 }
 
-/* Cursor size for clickable elements (when hovering over links, buttons, etc.) */
-body.cursor-click {
-    cursor: url('cursor-click.svg'), auto;
+/* Optional: If you want the clickable elements (buttons, links) to have a larger cursor */
+a, button, .clickable {
+    cursor: pointer;
 }
 
 
