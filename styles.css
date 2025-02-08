@@ -14,26 +14,27 @@ body {
     padding: 20px;
 }
 /* Hide the default system cursor */
-body {
-    cursor: none;
+* {
+    cursor: none !important; /* Apply cursor: none to all elements */
 }
 
 /* Custom cursor styling */
 .custom-cursor {
     position: absolute;
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-    background-image: url('cursor.svg'); /* Default custom cursor image */
-    background-size: contain; /* Fit the image inside the div */
-    pointer-events: none; /* Ensures the custom cursor doesn't block other clicks */
-    transition: transform 0.1s ease; /* Smooth cursor movement */
-    z-index: 9999; /* Ensure it stays on top of other content */
+    width: 32px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+    background-image: url('cursor.svg'); /* Default custom cursor */
+    background-size: contain;
+    pointer-events: none; /* Ensure it doesn't block other clicks */
+    z-index: 9999; /* Make sure it's on top */
+    transition: transform 0.1s ease; /* Smooth movement */
 }
 
-/* Optional: Clickable elements that trigger the cursor change */
+/* Ensure clickable elements still show the pointer cursor */
 a, button, .clickable {
-    cursor: pointer; /* Ensures the system cursor is visible over clickable elements if needed */
+    cursor: pointer; /* This makes sure the system cursor shows on interactive items */
 }
+
 
 
 /* Navbar Styling */
