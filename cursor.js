@@ -19,3 +19,7 @@ document.querySelectorAll('a, button, .clickable').forEach(item => {
         document.querySelector('.custom-cursor').style.backgroundImage = 'url("cursor.svg")';
     });
 });
+
+// Optional: You could also add the functionality to hide the default system cursor
+// and make sure the custom cursor is visible.
+document.body.style.cursor = 'none'; // Hide system cursor for the body
