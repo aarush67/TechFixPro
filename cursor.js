@@ -8,13 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
         cursor.style.top = e.pageY + 'px';
     }
 
-    // Get initial cursor position before first movement
+    // Get the current mouse position immediately on load
     document.addEventListener('mousemove', function (e) {
         moveCursor(e);
     }, { once: true });
 
     // Keep tracking mouse movement
     document.addEventListener('mousemove', moveCursor);
+
+    // Ensure cursor starts at the correct position
+    if ('ontouchstart' in window === false) {
+        document.addEventListener('mouseenter', function (e) {
+            moveCursor(e);
+        });
+    }
 
     // Handle clickable elements (buttons, links, etc.)
     document.querySelectorAll('a, button, .clickable').forEach(item => {
