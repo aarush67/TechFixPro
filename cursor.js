@@ -1,27 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
+    let cursor = document.querySelector('.custom-cursor');
+
+    // If the cursor doesn't exist, create it
+    if (!cursor) {
+        cursor = document.createElement('div');
+        cursor.classList.add('custom-cursor');
+        document.body.appendChild(cursor);
+    }
 
     function moveCursor(e) {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
+        cursor.style.opacity = '1'; // Make cursor visible only after first movement
     }
 
-    // Get the current mouse position immediately on load
+    // Initially hide the cursor to prevent the static image issue
+    cursor.style.opacity = '0';
+
+    // Get the current mouse position immediately and show the cursor
     document.addEventListener('mousemove', function (e) {
         moveCursor(e);
     }, { once: true });
 
     // Keep tracking mouse movement
     document.addEventListener('mousemove', moveCursor);
-
-    // Ensure cursor starts at the correct position
-    if ('ontouchstart' in window === false) {
-        document.addEventListener('mouseenter', function (e) {
-            moveCursor(e);
-        });
-    }
 
     // Handle clickable elements (buttons, links, etc.)
     document.querySelectorAll('a, button, .clickable').forEach(item => {
