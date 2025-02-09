@@ -1,15 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const cursor = document.querySelector('.custom-cursor');
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
 
     function moveCursor(e) {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
     }
 
-    // Set initial cursor position to prevent it from appearing in the top-left corner
+    // Get initial cursor position before first movement
     document.addEventListener('mousemove', function (e) {
         moveCursor(e);
-    }, { once: true }); // Runs once to set the initial position
+    }, { once: true });
 
     // Keep tracking mouse movement
     document.addEventListener('mousemove', moveCursor);
