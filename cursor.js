@@ -14,16 +14,25 @@ document.addEventListener('DOMContentLoaded', function () {
         cursor.style.opacity = '1'; // Ensure visibility
     }
 
-    // Make sure the cursor is visible and starts at the correct position
-    cursor.style.opacity = '0';
+    // Immediately show the cursor instead of hiding it initially
+    cursor.style.opacity = '1';
 
-    // Immediately set the cursor position to the last known mouse position
-    if (window.event) {
-        moveCursor(window.event);
+    // Try to get the last known mouse position from session storage
+    const lastX = sessionStorage.getItem('cursorX');
+    const lastY = sessionStorage.getItem('cursorY');
+
+    if (lastX && lastY) {
+        cursor.style.left = lastX + 'px';
+        cursor.style.top = lastY + 'px';
     }
 
-    // Keep tracking mouse movement
-    document.addEventListener('mousemove', moveCursor);
+    // Track mouse movement and update cursor position
+    document.addEventListener('mousemove', function (e) {
+        moveCursor(e);
+        // Save the cursor position to session storage before navigating away
+        sessionStorage.setItem('cursorX', e.pageX);
+        sessionStorage.setItem('cursorY', e.pageY);
+    });
 
     // Handle clickable elements (buttons, links, etc.)
     document.querySelectorAll('a, button, .clickable').forEach(item => {
