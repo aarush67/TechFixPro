@@ -1,25 +1,31 @@
-// Handle mouse movement
-document.addEventListener('mousemove', function (e) {
-    const cursor = document.querySelector('.custom-cursor'); // Custom cursor element
+document.addEventListener('DOMContentLoaded', function () {
+    const cursor = document.querySelector('.custom-cursor');
 
-    // Position the custom cursor at the mouse's X and Y coordinates
-    cursor.style.left = e.pageX + 'px';
-    cursor.style.top = e.pageY + 'px';
-});
+    // Function to update cursor position
+    function moveCursor(e) {
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+    }
 
-// Handle clickable areas (e.g., links, buttons, navbar)
-document.querySelectorAll('a, button, .clickable').forEach(item => {
-    item.addEventListener('mouseenter', function () {
-        // Change cursor to click version when hovering over clickable elements
-        document.querySelector('.custom-cursor').style.backgroundImage = 'url("cursor-click.svg")';
+    // Set the initial position to the mouse's current position when the page loads
+    document.addEventListener('mousemove', function (e) {
+        moveCursor(e);
+    }, { once: true }); // Runs only once to set initial position
+
+    // Handle continuous mouse movement
+    document.addEventListener('mousemove', moveCursor);
+
+    // Handle clickable elements
+    document.querySelectorAll('a, button, .clickable').forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            cursor.style.backgroundImage = 'url("cursor-click.svg")';
+        });
+
+        item.addEventListener('mouseleave', function () {
+            cursor.style.backgroundImage = 'url("cursor.svg")';
+        });
     });
 
-    item.addEventListener('mouseleave', function () {
-        // Change cursor back to default version when leaving clickable elements
-        document.querySelector('.custom-cursor').style.backgroundImage = 'url("cursor.svg")';
-    });
+    // Hide the system cursor
+    document.body.style.cursor = 'none';
 });
-
-// Optional: You could also add the functionality to hide the default system cursor
-// and make sure the custom cursor is visible.
-document.body.style.cursor = 'none'; // Hide system cursor for the body
