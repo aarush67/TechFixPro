@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function moveCursor(e) {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
-        cursor.style.opacity = '1'; // Make cursor visible only after first movement
+        cursor.style.opacity = '1'; // Ensure visibility
     }
 
-    // Initially hide the cursor to prevent the static image issue
+    // Make sure the cursor is visible and starts at the correct position
     cursor.style.opacity = '0';
 
-    // Get the current mouse position immediately and show the cursor
-    document.addEventListener('mousemove', function (e) {
-        moveCursor(e);
-    }, { once: true });
+    // Immediately set the cursor position to the last known mouse position
+    if (window.event) {
+        moveCursor(window.event);
+    }
 
     // Keep tracking mouse movement
     document.addEventListener('mousemove', moveCursor);
