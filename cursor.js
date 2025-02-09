@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cursor = document.querySelector('.custom-cursor');
 
-    // Function to update cursor position
     function moveCursor(e) {
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
     }
 
-    // Set the initial position to the mouse's current position when the page loads
+    // Set initial cursor position to prevent it from appearing in the top-left corner
     document.addEventListener('mousemove', function (e) {
         moveCursor(e);
-    }, { once: true }); // Runs only once to set initial position
+    }, { once: true }); // Runs once to set the initial position
 
-    // Handle continuous mouse movement
+    // Keep tracking mouse movement
     document.addEventListener('mousemove', moveCursor);
 
-    // Handle clickable elements
+    // Handle clickable elements (buttons, links, etc.)
     document.querySelectorAll('a, button, .clickable').forEach(item => {
         item.addEventListener('mouseenter', function () {
             cursor.style.backgroundImage = 'url("cursor-click.svg")';
@@ -26,6 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Hide the system cursor
+    // Hide the default system cursor
     document.body.style.cursor = 'none';
 });
