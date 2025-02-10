@@ -7,29 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(cursor);
     }
 
-    // Hide cursor until the first movement event to prevent top-left glitch
-    cursor.style.opacity = '0';
+    // Ensure the cursor starts at the correct position and is visible
+    cursor.style.opacity = '1';
+    cursor.style.position = 'fixed'; // Prevents unnecessary reflows and keeps it fast
 
-    // Move cursor instantly with the mouse
     function moveCursor(e) {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        cursor.style.opacity = '1'; // Show cursor when mouse moves
+        requestAnimationFrame(() => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
     }
 
+    // Track mouse movement and update cursor position
     document.addEventListener('mousemove', moveCursor);
 
-    document.addEventListener('mousedown', function () {
-        cursor.classList.add('cursor-click');
-    });
-
-    document.addEventListener('mouseup', function () {
-        cursor.classList.remove('cursor-click');
-    });
-
+    // Handle clickable elements (buttons, links, etc.)
     document.querySelectorAll('a, button, .clickable').forEach(item => {
-        item.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-        item.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        item.addEventListener('mouseenter', () => {
+            cursor.style.backgroundImage = 'url("cursor-click.svg")';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            cursor.style.backgroundImage = 'url("cursor.svg")';
+        });
     });
 
+    // Hide the default system cursor
     document.body.style.cursor = 'none';
 });
