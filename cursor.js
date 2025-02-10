@@ -7,10 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(cursor);
     }
 
+    // Hide cursor until the first movement event to prevent top-left glitch
+    cursor.style.opacity = '0';
+
     // Move cursor instantly with the mouse
-    document.addEventListener('mousemove', function (e) {
+    function moveCursor(e) {
         cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
+        cursor.style.opacity = '1'; // Show cursor when mouse moves
+    }
+
+    document.addEventListener('mousemove', moveCursor);
 
     document.addEventListener('mousedown', function () {
         cursor.classList.add('cursor-click');
