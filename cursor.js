@@ -7,31 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(cursor);
     }
 
-    let cursorX = 0, cursorY = 0;
-    let targetX = 0, targetY = 0;
-    let easing = 0.4; // Faster response (less lag)
-
-    // Ensure the cursor starts at the mouse position
+    // Move cursor instantly with the mouse
     document.addEventListener('mousemove', function (e) {
-        targetX = e.clientX;
-        targetY = e.clientY;
-
-        // Instantly move the cursor to the mouse position on first movement
-        if (cursorX === 0 && cursorY === 0) {
-            cursorX = targetX;
-            cursorY = targetY;
-            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-        }
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
-
-    function animateCursor() {
-        cursorX += (targetX - cursorX) * easing;
-        cursorY += (targetY - cursorY) * easing;
-
-        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-
-        requestAnimationFrame(animateCursor);
-    }
 
     document.addEventListener('mousedown', function () {
         cursor.classList.add('cursor-click');
@@ -47,6 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.body.style.cursor = 'none';
-
-    animateCursor(); // Start animation loop
 });
