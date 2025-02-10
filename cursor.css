@@ -1,21 +1,35 @@
 /* Hide the default system cursor */
 * {
-    cursor: none !important; /* Apply cursor: none to all elements */
+    cursor: none !important;
 }
 
 /* Custom cursor styling */
 .custom-cursor {
-    position: absolute;
-    width: 32px;  /* Adjust as needed */
-    height: 32px; /* Adjust as needed */
-    background-image: url('cursor.svg'); /* Default custom cursor */
+    position: fixed; /* Use fixed for better performance */
+    width: 24px; /* Slightly smaller for precision */
+    height: 24px;
+    background-image: url('cursor.svg');
     background-size: contain;
-    pointer-events: none; /* Ensure it doesn't block other clicks */
-    z-index: 9999; /* Make sure it's on top */
-    transition: transform 0.1s ease; /* Smooth movement */
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    will-change: transform, scale;
+    transition: transform 0.1s linear, scale 0.15s ease-out;
+}
+
+/* Click effect */
+.cursor-click {
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Hover effect for interactive elements */
+.cursor-hover {
+    background-image: url('cursor-click.svg');
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 /* Ensure clickable elements still show the pointer cursor */
 a, button, .clickable {
-    cursor: pointer; /* This makes sure the system cursor shows on interactive items */
+    cursor: pointer;
 }
