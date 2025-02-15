@@ -146,34 +146,30 @@ main {
     color: #333;
 }
 
-/* Issue Button Styling */
+/* Fixed "Read More" Button Styling */
 .issue-button {
-    background-color: #007BFF;
-    color: white;  /* Always visible text */
+    background-color: #e0e0e0;  /* Light grey for a modern look */
+    color: #333;  /* Dark text for readability */
     text-decoration: none;
-    padding: 10px 18px;
+    padding: 8px 16px;
     border-radius: 6px;
     font-size: 1em;
     font-weight: bold;
     border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     text-align: center;
 }
 
-/* Make sure the "Read More" text is always visible */
+/* Ensuring "Read More" is always visible */
 .issue-button span {
-    display: inline-block;
+    display: inline;
     visibility: visible;
     opacity: 1;
 }
 
-/* "More Guides" Link */
-.more-guides {
-    font-weight: 600;
-    color: #007BFF;
-    text-decoration: none;
+/* No hover effect, just a slight color change */
+.issue-button:hover {
+    background-color: #d6d6d6;  /* Slightly darker grey */
 }
 
 
