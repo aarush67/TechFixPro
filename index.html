@@ -42,6 +42,37 @@
 
     <!-- Google Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4778277727361005" crossorigin="anonymous"></script>
+
+    <style>
+        /* Bubble Styling */
+        .bubble {
+            background: #f1f1f1;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .bubble h2 {
+            color: #333;
+        }
+
+        .bubble p {
+            color: #555;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
@@ -58,22 +89,22 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="bubble">
         <h1>Fix Common Computer Problems</h1>
         <p>Your One-Stop Guide to Troubleshooting Windows and Mac Issues</p>
     </header>
 
     <!-- Intro Section -->
     <main>
-        <section id="intro">
+        <section id="intro" class="bubble">
             <h2>Welcome to TechFixPro!</h2>
             <p>Having trouble with your computer? You’re not alone! Many people experience common issues like slow performance, system crashes, and software errors. The good news is that most problems can be fixed easily with the right guidance.</p>
-            <p>At <strong>TechFixPro</strong>, we provide clear, step-by-step troubleshooting guides for both Windows and Mac users. Whether your PC is running slow, your Mac won’t boot, or your software is acting up, we have solutions.</p>
+            <p>At <strong>Techfixpro</strong>, we provide clear, step-by-step troubleshooting guides for both Windows and Mac users. Whether your PC is running slow, your Mac won’t boot, or your software is acting up, we have solutions.</p>
             <a href="blog.html" class="button">Explore Common Issues</a>
         </section>
 
         <!-- Common Problems Section -->
-        <section id="common-issues">
+        <section id="common-issues" class="bubble">
             <h2>Most Common Computer Problems & How to Fix Them</h2>
             <ul>
                 <li><a href="blog.html#slow-computer">Slow Computer? Speed It Up in Minutes</a></li>
@@ -86,15 +117,13 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about-me">
-            <div class="bubble">
-                <h2>About Me</h2>
-                <p>Hi! I’m Aarush, a tech enthusiast with a passion for helping people solve computer problems. Over the years, I’ve helped hundreds of users fix common issues with Windows and Mac. I created TechFixPro to share easy-to-follow solutions that anyone can use.</p>
-            </div>
+        <section id="about-me" class="bubble">
+            <h2>About Me</h2>
+            <p>Hi! I’m Aarush, a tech enthusiast with a passion for helping people solve computer problems. Over the years, I’ve helped hundreds of users fix common issues with Windows and Mac. I created TechFixPro to share easy-to-follow solutions that anyone can use.</p>
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq">
+        <section id="faq" class="bubble">
             <h2>Frequently Asked Questions</h2>
             <details>
                 <summary><strong>Why is my computer running slow?</strong></summary>
@@ -112,7 +141,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" class="bubble">
         <h2>Contact Us</h2>
         <p>Have questions or need more help? Reach out at <a href="mailto:contact@techfixpro.net">contact@techfixpro.net</a>.</p>
         <p>Follow us on social media for the latest troubleshooting tips.</p>
@@ -123,5 +152,6 @@
             <li><a href="/disclaimer.html">Disclaimer</a></li>
         </ul>
     </footer>
+
 </body>
 </html>
