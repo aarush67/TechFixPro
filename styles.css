@@ -51,8 +51,8 @@ body {
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #333;
-    color: #fff; /* Ensure header text color matches navbar */
+    background-color: #333; /* Same color as navbar */
+    color: #fff;
     padding: 40px 20px;
     border-radius: 10px;
     margin-bottom: 30px;
