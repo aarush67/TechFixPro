@@ -129,28 +129,43 @@ main {
 
 /* Issues List Styling */
 .issues-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px 0;
+    list-style: none;
+    padding: 0;
 }
 
-.issue-item {
-    display: block;
+.issues-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.issues-list li:hover {
+    background-color: #e9ecef;
+}
+
+/* Issue Button Styling */
+.issue-button {
     background-color: #007BFF;
     color: #fff;
     text-decoration: none;
-    padding: 12px 15px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
 }
 
-.issue-item:hover {
+.issue-button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 /* "More Guides" Link */
@@ -165,7 +180,6 @@ main {
     color: #0056b3;
     text-decoration: underline;
 }
-
 
 /* FAQ Section Styling */
 details {
