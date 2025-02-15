@@ -12,7 +12,6 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    scroll-behavior: smooth; /* Smooth scrolling for internal links */
 }
 
 /* Navbar Styling */
@@ -133,6 +132,60 @@ main {
 
 .button:hover {
     background-color: #0056b3;
+}
+
+/* Card Styling (For FAQ and Other Sections) */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* FAQ Section Styling */
+.faq {
+    margin-top: 50px;
+}
+
+.faq h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.faq .faq-item {
+    margin-bottom: 15px;
+}
+
+.faq .faq-item h3 {
+    font-size: 1.8em;
+    color: #007BFF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq .faq-item h3:hover {
+    color: #0056b3;
+}
+
+.faq .faq-item p {
+    font-size: 1.1em;
+    color: #555;
+    display: none;
+    margin-top: 10px;
 }
 
 /* About Me Section with Bubble */
