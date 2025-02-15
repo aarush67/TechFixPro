@@ -154,23 +154,25 @@ main {
 /* Issue Button Styling */
 .issue-button {
     background-color: #007BFF;
-    color: white;  /* Always visible text */
+    color: white;  /* Ensures text is always visible */
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 6px;
     font-size: 1em;
     font-weight: bold;
     border: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
 }
 
-/* Button Text Always Visible */
+/* Make sure the "Read More" text is always visible */
 .issue-button span {
-    visibility: visible !important; /* Ensures text is always there */
-    opacity: 1 !important;
     display: inline-block;
+    visibility: visible; /* Ensures it's never hidden */
+    opacity: 1;
 }
 
 /* Hover Effect (Only Changes Background, Not Text) */
