@@ -48,21 +48,6 @@ body {
     background-color: #007BFF;
 }
 
-/* Navbar Responsiveness */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        padding: 12px 20px;
-        font-size: 1.2em;
-        text-align: center;
-        width: 100%;
-    }
-}
-
 /* Header Styling */
 header {
     text-align: center;
@@ -83,37 +68,68 @@ header p {
     font-size: 1.1em;
 }
 
-/* Header Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-    
-    header p {
-        font-size: 1em;
-    }
-}
-
-/* Intro Section Styling */
+/* Main Content Styling */
 main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#intro {
-    margin-bottom: 30px;
-}
-
-#intro h2 {
-    font-size: 2em;
-    color: #333;
+/* Card Styling for Sections */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-#intro p {
+.card h2 {
+    font-size: 1.8em;
     margin-bottom: 15px;
+    color: #333;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card li {
+    margin: 10px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+
+.card p {
     font-size: 1.1em;
+    color: #555;
+}
+
+/* FAQ Section Styling */
+details {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+details summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+details p {
+    font-size: 1em;
     color: #555;
 }
 
@@ -132,111 +148,6 @@ main {
 
 .button:hover {
     background-color: #0056b3;
-}
-
-/* Card Styling (For FAQ and Other Sections) */
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.card p {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* FAQ Section Styling */
-.faq {
-    margin-top: 50px;
-}
-
-.faq h2 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 25px;
-}
-
-.faq .faq-item {
-    margin-bottom: 15px;
-}
-
-.faq .faq-item h3 {
-    font-size: 1.8em;
-    color: #007BFF;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.faq .faq-item h3:hover {
-    color: #0056b3;
-}
-
-.faq .faq-item p {
-    font-size: 1.1em;
-    color: #555;
-    display: none;
-    margin-top: 10px;
-}
-
-/* About Me Section with Bubble */
-.about-me {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.bubble {
-    background-color: #fff;
-    padding: 15px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 650px;
-    width: 100%;
-    text-align: center;
-}
-
-.bubble h2 {
-    color: #333;
-    font-size: 1.8em;
-    margin-bottom: 12px;
-}
-
-.bubble p {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-/* About Me Section Responsiveness */
-@media (max-width: 768px) {
-    .about-me {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .bubble {
-        padding: 20px;
-        width: 90%;  /* Adjust width to 90% of the container on smaller screens */
-    }
-
-    .bubble h2 {
-        font-size: 1.8em;
-    }
-
-    .bubble p {
-        font-size: 1em;
-    }
 }
 
 /* Footer Styling */
@@ -258,79 +169,22 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Footer Responsiveness */
-@media (max-width: 768px) {
-    footer {
-        font-size: 0.9em;
-    }
-}
-
-/* Footer Legal Links */
-footer .legal-links {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin-top: 10px;
-}
-
-footer .legal-links li {
-    display: inline;
-    margin: 0 15px;
-}
-
-footer .legal-links a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 1em;
-    transition: color 0.3s ease;
-}
-
-footer .legal-links a:hover {
-    color: #0056b3;
-}
-
-/* Legal Links Responsiveness */
-@media (max-width: 768px) {
-    footer .legal-links li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    footer .legal-links a {
-        font-size: 0.9em;
-    }
-}
-
-/* Simple Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-section {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Responsive Design for Smaller Screens */
+/* Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
 
     header h1 {
         font-size: 2em;
     }
 
-    #intro h2 {
-        font-size: 1.8em;
+    .card h2 {
+        font-size: 1.6em;
     }
 
-    .bubble h2 {
-        font-size: 1.8em;
+    .card p {
+        font-size: 1em;
     }
 
     .navbar ul {
