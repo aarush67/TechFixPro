@@ -151,10 +151,10 @@ main {
     background-color: #e9ecef;
 }
 
-/* Issue Button Styling (Always Visible) */
+/* Issue Button Styling */
 .issue-button {
     background-color: #007BFF;
-    color: #fff;
+    color: #fff;  /* Ensures text is always visible */
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 6px;
@@ -165,6 +165,15 @@ main {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Ensures text is always visible inside the button */
+.issue-button span {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
 .issue-button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
