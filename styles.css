@@ -144,17 +144,12 @@ main {
     font-size: 1.1em;
     font-weight: 500;
     color: #333;
-    transition: background-color 0.3s ease;
-}
-
-.issues-list li:hover {
-    background-color: #e9ecef;
 }
 
 /* Issue Button Styling */
 .issue-button {
     background-color: #007BFF;
-    color: white;  /* Ensures text is always visible */
+    color: white;  /* Always visible text */
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 6px;
@@ -164,21 +159,14 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
 }
 
 /* Make sure the "Read More" text is always visible */
 .issue-button span {
     display: inline-block;
-    visibility: visible; /* Ensures it's never hidden */
+    visibility: visible;
     opacity: 1;
-}
-
-/* Hover Effect (Only Changes Background, Not Text) */
-.issue-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
 }
 
 /* "More Guides" Link */
@@ -186,12 +174,6 @@ main {
     font-weight: 600;
     color: #007BFF;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.more-guides:hover {
-    color: #0056b3;
-    text-decoration: underline;
 }
 
 
