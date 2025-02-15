@@ -154,7 +154,7 @@ main {
 /* Issue Button Styling */
 .issue-button {
     background-color: #007BFF;
-    color: #fff;  /* Ensures text is always visible */
+    color: #FFF;  /* Ensures text is always visible */
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 6px;
@@ -163,9 +163,10 @@ main {
     border: none;
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
-/* Ensures text is always visible inside the button */
+/* Button Text Always Visible */
 .issue-button span {
     display: inline-block;
     visibility: visible;
