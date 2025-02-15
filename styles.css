@@ -111,6 +111,61 @@ main {
     font-size: 1.1em;
     color: #555;
 }
+/* Common Issues Section */
+#common-issues {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#common-issues h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Issues List Styling */
+.issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 0;
+}
+
+.issue-item {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.issue-item:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* "More Guides" Link */
+.more-guides {
+    font-weight: 600;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.more-guides:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 
 /* FAQ Section Styling */
 details {
