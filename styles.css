@@ -51,7 +51,7 @@ body {
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #333; /* Same color as navbar */
+    background-color: #333;
     color: #fff;
     padding: 40px 20px;
     border-radius: 10px;
@@ -67,7 +67,6 @@ header h1 {
 header p {
     font-size: 1.1em;
 }
-
 /* Main Content Styling */
 main {
     max-width: 1200px;
