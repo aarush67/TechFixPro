@@ -9,14 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f7f6;
-    color: #222; /* Darker text for better readability */
-    line-height: 1.8;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #222; /* Darker shade for better contrast */
+    background-color: #333;
     padding: 15px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -26,9 +26,8 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
     padding: 0;
 }
 
@@ -43,38 +42,44 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: 500;
 }
 
-.navbar a:hover, .navbar a:focus {
+.navbar a:hover {
     background-color: #007BFF;
+}
+
+/* Mobile Navbar Fix */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #222;
+    background-color: #333;
     color: #fff;
-    padding: 50px 20px;
+    padding: 40px 20px;
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.4em;
+    font-size: 2.3em;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 /* Main Content Styling */
 main {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 /* Card Styling for Sections */
@@ -87,14 +92,13 @@ main {
 }
 
 .card h2 {
-    font-size: 1.9em;
+    font-size: 1.8em;
     margin-bottom: 15px;
-    color: #222;
+    color: #333;
 }
 
 .card ul {
     list-style: none;
-    padding-left: 0;
 }
 
 .card li {
@@ -105,17 +109,15 @@ main {
     text-decoration: none;
     color: #007BFF;
     transition: color 0.3s ease;
-    font-weight: 500;
 }
 
-.card a:hover, .card a:focus {
+.card a:hover {
     color: #0056b3;
-    text-decoration: underline;
 }
 
 .card p {
     font-size: 1.1em;
-    color: #444;
+    color: #555;
 }
 
 /* Common Issues Section */
@@ -129,9 +131,9 @@ main {
 }
 
 #common-issues h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 15px;
-    color: #222;
+    color: #333;
 }
 
 /* Issues List Styling */
@@ -150,13 +152,13 @@ main {
     margin-bottom: 10px;
     font-size: 1.1em;
     font-weight: 500;
-    color: #222;
+    color: #333;
 }
 
 /* Fixed "Read More" Button Styling */
 .issue-button {
-    background-color: #e0e0e0; 
-    color: #222;
+    background-color: #e0e0e0;
+    color: #333;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 6px;
@@ -165,7 +167,6 @@ main {
     border: none;
     display: inline-block;
     text-align: center;
-    transition: background-color 0.3s ease;
 }
 
 /* Ensuring "Read More" is always visible */
@@ -187,36 +188,34 @@ details {
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
 }
 
 details summary {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
-    color: #222;
+    color: #333;
+    cursor: pointer;
 }
 
 details p {
-    font-size: 1.1em;
-    color: #444;
-    padding-top: 10px;
+    font-size: 1em;
+    color: #555;
 }
 
 /* Button Styling */
 .button {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     font-size: 1em;
-    border-radius: 6px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
     text-align: center;
-    font-weight: bold;
 }
 
-.button:hover, .button:focus {
+.button:hover {
     background-color: #0056b3;
 }
 
@@ -224,10 +223,10 @@ details p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #333;
     color: #fff;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 footer a {
@@ -236,11 +235,11 @@ footer a {
     font-weight: 500;
 }
 
-footer a:hover, footer a:focus {
+footer a:hover {
     text-decoration: underline;
 }
 
-/* Improved Mobile Responsiveness */
+/* Responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 30px 20px;
@@ -260,13 +259,12 @@ footer a:hover, footer a:focus {
 
     .navbar ul {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
     .navbar a {
         font-size: 1em;
         padding: 12px;
-        text-align: center;
     }
 
     footer {
