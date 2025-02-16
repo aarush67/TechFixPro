@@ -9,14 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+    color: #222; /* Darker text for better readability */
+    line-height: 1.8;
     padding: 20px;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #333;
+    background-color: #222; /* Darker shade for better contrast */
     padding: 15px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -27,7 +27,8 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
     padding: 0;
 }
 
@@ -39,34 +40,36 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 1.1em;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
-.navbar a:hover {
+.navbar a:hover, .navbar a:focus {
     background-color: #007BFF;
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    padding: 40px 20px;
+    padding: 50px 20px;
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.3em;
+    font-size: 2.4em;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
+
 /* Main Content Styling */
 main {
     max-width: 1200px;
@@ -84,13 +87,14 @@ main {
 }
 
 .card h2 {
-    font-size: 1.8em;
+    font-size: 1.9em;
     margin-bottom: 15px;
-    color: #333;
+    color: #222;
 }
 
 .card ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .card li {
@@ -101,16 +105,19 @@ main {
     text-decoration: none;
     color: #007BFF;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
-.card a:hover {
+.card a:hover, .card a:focus {
     color: #0056b3;
+    text-decoration: underline;
 }
 
 .card p {
     font-size: 1.1em;
-    color: #555;
+    color: #444;
 }
+
 /* Common Issues Section */
 #common-issues {
     background-color: #fff;
@@ -122,9 +129,9 @@ main {
 }
 
 #common-issues h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 15px;
-    color: #333;
+    color: #222;
 }
 
 /* Issues List Styling */
@@ -143,13 +150,13 @@ main {
     margin-bottom: 10px;
     font-size: 1.1em;
     font-weight: 500;
-    color: #333;
+    color: #222;
 }
 
 /* Fixed "Read More" Button Styling */
 .issue-button {
-    background-color: #e0e0e0;  /* Light grey for a modern look */
-    color: #333;  /* Dark text for readability */
+    background-color: #e0e0e0; 
+    color: #222;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 6px;
@@ -158,6 +165,7 @@ main {
     border: none;
     display: inline-block;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 /* Ensuring "Read More" is always visible */
@@ -169,9 +177,8 @@ main {
 
 /* No hover effect, just a slight color change */
 .issue-button:hover {
-    background-color: #d6d6d6;  /* Slightly darker grey */
+    background-color: #d6d6d6;
 }
-
 
 /* FAQ Section Styling */
 details {
@@ -180,33 +187,36 @@ details {
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 details summary {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
-    color: #333;
+    color: #222;
 }
 
 details p {
-    font-size: 1em;
-    color: #555;
+    font-size: 1.1em;
+    color: #444;
+    padding-top: 10px;
 }
 
 /* Button Styling */
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
     font-size: 1em;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background-color 0.3s ease;
     text-align: center;
+    font-weight: bold;
 }
 
-.button:hover {
+.button:hover, .button:focus {
     background-color: #0056b3;
 }
 
@@ -214,9 +224,10 @@ details p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     border-radius: 10px;
+    margin-top: 30px;
 }
 
 footer a {
@@ -225,11 +236,11 @@ footer a {
     font-weight: 500;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
     text-decoration: underline;
 }
 
-/* Responsiveness */
+/* Improved Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 30px 20px;
@@ -249,6 +260,7 @@ footer a:hover {
 
     .navbar ul {
         flex-direction: column;
+        align-items: center;
     }
 
     .navbar a {
