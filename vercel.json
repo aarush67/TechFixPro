@@ -1,5 +1,0 @@
-{
-  "redirects": [
-    { "source": "/whatsmyip.html", "destination": "/whatsmyip", "permanent": true }
-  ]
-}
